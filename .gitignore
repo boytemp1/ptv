@@ -1,10 +1,26 @@
+# Android Studio / VSCode 等编辑器缓存
 .idea
 .vscode
-.gradle
-.github
 .settings
-*build
-*.jks
-*.properties
-lib-*.aar
+*.iml
+
+# Gradle 运行时缓存
+.gradle
+
+# 核心：只忽略本地 SDK 配置，千万保留 gradle.properties
+local.properties
+
+# 编译输出目录
+build/
+**/build/
 /Release
+captures/
+.externalNativeBuild
+.cxx
+
+# 证书防泄露（安全保护）
+*.jks
+*.keystore
+
+# 编译生成的 aar 包（如果你不需要提交它）
+lib-*.aar
